@@ -4,6 +4,7 @@ const express = require("express");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const HeroRouter_1 = require("./routes/HeroRouter");
+const PeopleRouter_1 = require("./routes/PeopleRouter");
 // Creates and configures an ExpressJS web server.
 class App {
     //Run configuration methods on the Express instance.
@@ -26,8 +27,15 @@ class App {
                 message: 'Hello World!'
             });
         });
+        router.post('/', (req, res, next) => {
+            console.log(req.body);
+            res.json({
+                message: 'Hello Post World!'
+            });
+        });
         this.express.use('/', router);
         this.express.use('/api/heroes', HeroRouter_1.default);
+        this.express.use('/api/people', PeopleRouter_1.default);
     }
 }
 exports.default = new App().express;
