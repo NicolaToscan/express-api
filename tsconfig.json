@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "outDir": "bin/www"
+    },
+    "include": [
+      "src/**/*.ts",
+      "src/assets/**/*"
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+    "assets": [
+        "src/assets/**/*"
+    ]
+  }
