@@ -27,7 +27,7 @@ class App {
             });
         });
         this.express.use('/', router);
-        this.express.use('/api/v1/heroes', HeroRouter_1.default);
+        this.express.use('/api/heroes', HeroRouter_1.default);
     }
 }
 exports.default = new App().express;
